@@ -1,0 +1,184 @@
+/* Apply box-sizing globally to all elements */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(84, 199, 214);
+    /* Light gray background */
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    /* Increased padding to create space inside the form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Consistent styling for all input fields, textarea, and select elements */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    /* Ensure no background color */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+
+/* Hover effect for input fields */
+
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form textarea:hover,
+.contact-form select:hover {
+    border-color: #66afe9;
+    /* Change border color on hover */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    /* Add a subtle shadow on hover */
+}
+
+
+/* Focus state for all input fields, textarea, and select elements */
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.contact-form .name-fields {
+    display: flex;
+    gap: 20px;
+    /* Space between First Name and Last Name */
+}
+
+.contact-form .name-field {
+    flex: 1;
+    /* Equal width for both fields */
+}
+
+.contact-form .name-field:last-child {
+    margin-right: 10px;
+    /* Margin for Last Name field */
+}
+
+.contact-form .query-type-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between General Enquiry and Support Request */
+}
+
+.contact-form .checkbox {
+    margin-bottom: 20px;
+}
+
+.contact-form .checkbox label {
+    font-weight: normal;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    /* Space between message and form */
+    display: none;
+    /* Hidden by default */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* Responsive Design for Mobile Devices */
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+    }
+    .contact-form h2 {
+        font-size: 20px;
+        /* Smaller heading for mobile */
+    }
+    .contact-form .name-fields {
+        flex-direction: column;
+        /* Stack First Name and Last Name vertically */
+        gap: 10px;
+        /* Reduce gap between fields */
+    }
+    .contact-form .name-field:last-child {
+        margin-right: 0;
+        /* Remove margin for Last Name field */
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea,
+    .contact-form select {
+        font-size: 14px;
+        /* Smaller font size for mobile */
+    }
+    .contact-form button {
+        font-size: 14px;
+        /* Smaller button text for mobile */
+    }
+}
